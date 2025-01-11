@@ -1,0 +1,227 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background: linear-gradient(45deg, #f9f3ed, #c4a484, #ffffff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.svg-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: auto;
+    z-index: -1; /* Placez en arrière-plan */
+}
+
+.svg-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: auto;
+    z-index: -1; /* Placez en arrière-plan */
+}
+
+/* Menu de navigation */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 100px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    color: #1B3168;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    border: 1px solid #ddd;
+}
+
+.dropdown-content a {
+    color: #1B3168;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Titre principal */
+.title {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #C4A484;
+}
+
+.sub-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1B3168;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background: #C4A484;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Section des valeurs */
+.values-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.value {
+    text-align: center;
+    background-color: #F9F3ED;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    position: relative;
+    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.value h2 {
+    font-size: 20px;
+    color: #1B3168;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.value p {
+    font-size: 16px;
+    color: #C4A484;
+}
+
+.diamond {
+    width: 10px;
+    height: 10px;
+    background-color: #C4A484;
+    transform: rotate(45deg);
+    margin: 0 auto 10px;
+}
+
+/* Titre des principes */
+.principles-title {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.principles-title h1 {
+    font-size: 28px;
+    color: #C4A484;
+    font-weight: bold;
+}
+
+.principles-title .highlight {
+    color: #1B3168;
+}
+
+/* Section des principes */
+.principles-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.principle {
+    background-color: #f9f9f9; /* Couleur plus douce pour le fond */
+    border-left: 2px solid #E6D6C4; /* Bordure plus fine et couleur plus discrète */
+    padding: 20px;
+    border-radius: 5px; /* Coins légèrement arrondis */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05); /* Ombre plus subtile */
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation subtile */
+}
+
+.principle:hover {
+    transform: translateY(-5px); /* Effet de survol élégant */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Accentuation au survol */
+}
+
+.principle h2 {
+    font-size: 18px;
+    color: #1B3168;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.principle ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.principle ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    color: #1B3168;
+    font-size: 16px;
+}
+
+.principle ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #C4A484;
+    font-size: 12px;
+}
+
