@@ -20,7 +20,7 @@ body {
     right: 0;
     width: 150px;
     height: auto;
-    z-index: -1; /* Placez en arrière-plan */
+    z-index: -1;
 }
 
 .svg-bottom-left {
@@ -29,10 +29,9 @@ body {
     left: 0;
     width: 150px;
     height: auto;
-    z-index: -1; /* Placez en arrière-plan */
+    z-index: -1;
 }
 
-/* Menu de navigation */
 .header {
     display: flex;
     align-items: center;
@@ -89,7 +88,6 @@ body {
     display: block;
 }
 
-/* Titre principal */
 .title h1 {
     text-align: center;
     margin: 40px 0 20px;
@@ -107,7 +105,6 @@ body {
     color: #C4A484;
 }
 
-/* Contenu principal */
 .content {
     display: flex;
     justify-content: center;
