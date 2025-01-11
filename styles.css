@@ -100,7 +100,7 @@
 }
 
 .tagline {
-    color: #D4B982;
+    color: #C4A484;
     font-size: 1.2em;
     margin-bottom: 40px;
 }
@@ -108,7 +108,7 @@
 .main-text {
     font-size: 1.5em;
     margin-bottom: 40px;
-    color: #333;
+    color: #1B3168;
     line-height: 1.6;
 }
 
@@ -120,7 +120,7 @@
 .expertise {
     text-align: center;
     font-size: 1.2em;
-    color: #333;
+    color: #1B3168;
 }
 
 .expertise div {
@@ -132,6 +132,11 @@
     font-weight: bold;
 }
 
+.email{
+    text-align: center;
+    font-size: 1.2em;
+    color: #1B3168;
+}
 @media (max-width: 1024px) {
     .background-left, .background-right {
         width: 25%;
@@ -148,4 +153,13 @@
     .center-content {
         width: 100%;
     }
+}
+
+.diamond {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #C4A484;
+    transform: rotate(45deg); /* Tourne le carré pour former un losange */
+    margin: 20px 0;
 }
