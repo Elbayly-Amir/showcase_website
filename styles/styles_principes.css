@@ -1,9 +1,10 @@
+/* Style de base */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff); /* Dégradé plus clair */
+    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff);
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
 }
@@ -24,12 +25,14 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
 }
 
 .dropbtn {
@@ -72,23 +75,23 @@ body {
 
 .title {
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 20px 0;
 }
 
 .main-title {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     color: #C4A484;
 }
 
 .sub-title {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     color: #1B3168;
 }
 
 .underline {
-    width: 80px;
+    width: 60px;
     height: 3px;
     background: #C4A484;
     margin: 10px auto;
@@ -99,29 +102,31 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin: 50px auto;
+    margin: 20px auto;
     max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .value {
     text-align: center;
     background-color: #F9F3ED;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     width: 250px;
     position: relative;
     clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    margin-bottom: 20px;
 }
 
 .value h2 {
-    font-size: 20px;
+    font-size: 18px;
     color: #1B3168;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .value p {
-    font-size: 16px;
+    font-size: 14px;
     color: #C4A484;
 }
 
@@ -135,11 +140,11 @@ body {
 
 .principles-title {
     text-align: center;
-    margin: 50px 0 20px;
+    margin: 30px 0;
 }
 
 .principles-title h1 {
-    font-size: 28px;
+    font-size: 24px;
     color: #C4A484;
     font-weight: bold;
 }
@@ -151,10 +156,11 @@ body {
 .principles-section {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin: 40px auto;
+    gap: 20px;
+    margin: 20px auto;
     max-width: 1200px;
     padding: 0 20px;
+    flex-wrap: wrap; /* Permet de réorganiser les blocs */
 }
 
 .principle {
@@ -165,7 +171,7 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     width: 300px;
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Ajout pour espacer sur mobile */
 }
 
 .principle:hover {
@@ -174,9 +180,9 @@ body {
 }
 
 .principle h2 {
-    font-size: 18px;
+    font-size: 16px;
     color: #1B3168;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -190,7 +196,7 @@ body {
     position: relative;
     padding-left: 20px;
     color: #1B3168;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .principle ul li::before {
@@ -199,6 +205,49 @@ body {
     left: 0;
     top: 0;
     color: #C4A484;
-    font-size: 12px;
+    font-size: 10px;
 }
 
+/* RESPONSIVE DESIGN */
+
+/* Tablettes et mobiles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Empile le logo et le menu */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60px; /* Réduction de la taille sur mobile */
+        margin-bottom: 10px;
+    }
+
+    .main-title, .sub-title {
+        font-size: 24px; /* Réduction des titres */
+    }
+
+    .underline {
+        width: 40px; /* Plus petite sur mobile */
+    }
+
+    .values-section {
+        flex-direction: column; /* Réorganise en colonne */
+        align-items: center;
+        gap: 20px; /* Espace entre les valeurs */
+    }
+
+    .value {
+        width: 90%; /* Prend presque toute la largeur */
+    }
+
+    .principles-section {
+        flex-direction: column; /* Réorganise en colonne */
+        align-items: center;
+        gap: 20px; /* Espace entre les principes */
+    }
+
+    .principle {
+        width: 90%; /* Prend presque toute la largeur */
+    }
+}

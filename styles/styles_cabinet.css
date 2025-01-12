@@ -1,9 +1,10 @@
+/* Style de base */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff); /* Dégradé plus clair */
+    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff);
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
 }
@@ -24,12 +25,13 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-right: auto;
 }
 
 .dropbtn {
@@ -72,17 +74,17 @@ body {
 
 .title h1 {
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 30px 0 10px;
 }
 
 .main-title {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     color: #1B3168;
 }
 
 .sub-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     color: #C4A484;
 }
@@ -92,13 +94,13 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    margin: 50px auto;
+    margin: 40px auto;
     max-width: 1200px;
     padding: 0 20px;
 }
 
 .profile img {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -153,4 +155,60 @@ body {
     top: 0;
     color: #C4A484;
     font-size: 12px;
+}
+
+/* Responsive Design */
+
+/* Tablettes et mobiles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .title h1 {
+        margin: 20px 0;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile img {
+        width: 200px;
+    }
+
+    .description {
+        font-size: 14px;
+        text-align: center;
+
+        .highlight {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .parcours h2 {
+            font-size: 18px;
+        }
+
+        .parcours ul li {
+            font-size: 14px;
+        }
+    }
 }

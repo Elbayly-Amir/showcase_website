@@ -1,9 +1,10 @@
+/* Style de base */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff); /* Dégradé plus clair */
+    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff);
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
 }
@@ -24,12 +25,13 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 80px;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-right: auto;
 }
 
 .dropbtn {
@@ -72,26 +74,26 @@ body {
 
 .title h1 {
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 20px 0;
 }
 
 .main-title {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     color: #1B3168;
 }
 
 .sub-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     color: #C4A484;
 }
 
 .underline {
-    width: 80px;
+    width: 60px;
     height: 3px;
     background: #C4A484;
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
     border-radius: 2px;
 }
 
@@ -99,8 +101,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding: 0 50px;
+    padding: 0 20px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -109,7 +112,7 @@ body {
     border-left: 3px solid #C4A484;
     padding-left: 15px;
     border-radius: 10px;
-    margin-bottom: 125px;
+    margin-bottom: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -119,7 +122,7 @@ body {
 }
 
 .column h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #C4A484;
     font-weight: bold;
     margin-bottom: 10px;
@@ -131,17 +134,17 @@ body {
 }
 
 .column p {
-    font-size: 16px;
+    font-size: 14px;
     color: #1B3168;
     line-height: 1.5;
 }
 
 .additional-text {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: #1B3168;
-    margin: 30px auto;
-    max-width: 800px;
+    margin: 20px auto;
+    max-width: 600px;
     line-height: 1.8;
 }
 
@@ -150,6 +153,60 @@ body {
     color: #1B3168;
 }
 
-.subtitle{
-    margin-bottom: 120px;
+.subtitle {
+    margin-bottom: 40px;
+}
+
+/* Responsive Design */
+
+/* Tablettes et Mobiles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .title h1 {
+        margin: 20px 0;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 90%;
+        text-align: left;
+        padding: 20px;
+        border-left: 5px solid #C4A484;
+    }
+
+    .column h2 {
+        font-size: 18px;
+    }
+
+    .column p {
+        font-size: 14px;
+    }
+
+    .additional-text {
+        font-size: 14px;
+        margin: 20px 10px;
+    }
 }
