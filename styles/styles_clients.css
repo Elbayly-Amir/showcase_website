@@ -145,7 +145,7 @@ body {
     font-weight: bold;
     text-align: center;
     width: 160px;
-    height: 120px;
+    height: 130px;
     clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     align-items: center;
@@ -153,8 +153,10 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     font-size: 14px;
-    padding: 5px;
+    padding: 10px;
+    line-height: 1.2;
 }
+
 
 
 .hex:hover {
