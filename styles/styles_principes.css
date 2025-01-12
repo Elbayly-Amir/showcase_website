@@ -26,6 +26,7 @@ body {
 
 .logo {
     height: 80px;
+    margin-left: auto;
 }
 
 .dropdown {
