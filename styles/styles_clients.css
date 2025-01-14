@@ -163,17 +163,21 @@ body {
 }
 
 .icon-center {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .icon-center img {
-    width: 80%;
-    height: auto;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
+
 
 .hex-long-text {
     font-size: 13px;
