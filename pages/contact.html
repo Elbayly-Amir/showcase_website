@@ -4,55 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JLLB Avocats</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     <link rel="icon" type="image/x-icon" href="../images/logo.png">
 </head>
 <body>
+<!-- Conteneur principal englobant l'arrière-plan et le contenu -->
 <div class="main-container">
     <div class="background-left"></div>
     <div class="background-right"></div>
 
-    <div class="content-container">
-        <div class="dropdown">
-            <button class="dropbtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-                Menu
-            </button>
-            <div class="dropdown-content">
-                <a href="../index.html">Accueil</a>
-                <a href="./expertise.html">Notre Expertise</a>
-                <a href="./services.html">Nos Services</a>
-                <a href="./cabinet.html">Le Cabinet</a>
-                <a href="./clients.html">Nos Clients</a>
-                <a href="./principes.html">Principes & Valeurs Ajoutées</a>
+    <!-- Wrapper pour le contenu et le footer (layout en flex) -->
+    <div class="page-wrapper">
+        <div class="content-container">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6"  x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    Menu
+                </button>
+                <div class="dropdown-content">
+                    <a href="../index.html">Accueil</a>
+                    <a href="./expertise.html">Notre Expertise</a>
+                    <a href="./services.html">Nos Services</a>
+                    <a href="./cabinet.html">Le Cabinet</a>
+                    <a href="./clients.html">Nos Clients</a>
+                    <a href="./principes.html">Principes & Valeurs Ajoutées</a>
+                </div>
+            </div>
+
+            <div class="center-content">
+                <img src="../images/logo.png" alt="JLLB Avocats" class="logo">
+                <div class="tagline">
+                    Ensemble, construisons<br>
+                    les fondations de votre avenir
+                </div>
+                <div class="main-text">
+                    19 Villa de la Croix-Nivert 75015 Paris
+                </div>
+                <div class="diamond"></div>
+                <div class="expertise">
+                    <strong>Laurine Bernat</strong><br>
+                    <strong>Avocat</strong><br><br>
+                    <span>Tél. : XX XX XX XX XX</span><br>
+                    <span>Mail : l.bernat@jllbavocats.com</span><br><br>
+                </div>
+                <div class="diamond"></div>
+                <strong class="expertise">www.jllbavocats.com</strong>
             </div>
         </div>
-        <div class="center-content">
-            <img src="../images/logo.png" alt="JLLB Avocats" class="logo">
-            <div class="tagline">
-                Ensemble, construisons<br>
-                les fondations de votre avenir
-            </div>
 
-            <div class="main-text">
-                19 Villa de la Croix-Nivert 75015 Paris
-            </div>
-            <div class="diamond"></div>
-            <div class="expertise">
-                <strong>Laurine Bernat</strong><br>
-                <strong>Avocat</strong><br><br>
-                <span>Tél. : XX XX XX XX XX</span><br>
-                <span>Mail : l.bernat@jllbavocats.com</span><br><br>
-
-
-            </div>
-            <div class="diamond"></div>
-            <strong class="expertise">www.jllbavocats.com</strong>
-        </div>
+        <!-- Footer moderne avec délimitation discrète -->
+        <footer>
+            <form action="https://formspree.io/f/xldglpzj" method="POST" class="contact-form">
+                <h2>Contactez-nous</h2>
+                <label for="message">Votre message :</label>
+                <textarea id="message" name="message" placeholder="Tapez votre message ici" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </footer>
     </div>
 </div>
 </body>
