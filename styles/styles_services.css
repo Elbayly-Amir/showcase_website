@@ -15,6 +15,22 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation à tous les éléments enfants directs du body */
+body > * {
+    animation: slideIn 0.8s ease-out;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -144,12 +160,15 @@ body {
 }
 
 .additional-text {
-    text-align: center;
-    font-size: 14px;
+    position: relative;
+    left: -340px; /* décalage de 20px vers la gauche */
+    text-align: left;
+    font-size: 17px;
     color: #1B3168;
-    margin: 20px auto;
+    margin: 80px auto;
     max-width: 600px;
-    line-height: 1.8;
+    line-height: 1.4;
+    white-space: nowrap;
 }
 
 .additional-text strong {

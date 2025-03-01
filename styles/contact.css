@@ -6,15 +6,29 @@
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Conteneur principal */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body > * {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Structure principale */
 .main-container {
-    min-height: 100vh; /* Permet au conteneur de s'étendre si le contenu dépasse */
+    min-height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-/* Arrière-plans */
 .background-left, .background-right {
     position: absolute;
     width: 33.33%;
@@ -34,34 +48,7 @@
     background: url('../images/background.jpg') right center/cover no-repeat;
 }
 
-/* Conteneur du contenu */
-.content-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Contenu central */
-.center-content {
-    width: 33.33%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
-    z-index: 2;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Menu déroulant */
+/* Navigation */
 .dropdown {
     position: fixed;
     top: 10px;
@@ -96,7 +83,6 @@
     z-index: 1;
     border-radius: 5px;
     overflow: hidden;
-    transition: opacity 0.3s ease;
 }
 
 .dropdown-content a {
@@ -105,18 +91,44 @@
     text-decoration: none;
     display: block;
     font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(27, 49, 104, 0.1);
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    opacity: 1;
 }
 
-/* Texte et images */
+/* Contenu central */
+.content-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-content {
+    width: 33.33%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Éléments de contenu */
 .logo {
     width: 150px;
     margin-bottom: 40px;
@@ -136,25 +148,11 @@
     line-height: 1.6;
 }
 
-.main-text span {
-    color: #1B3168;
-    font-weight: bold;
-}
-
 .expertise {
     text-align: center;
     font-size: 1.2em;
     color: #1B3168;
     margin-top: 20px;
-}
-
-.expertise div {
-    margin: 15px 0;
-}
-
-.expertise span {
-    color: #1B3168;
-    font-weight: bold;
 }
 
 .diamond {
@@ -166,87 +164,95 @@
     margin: 20px 0;
 }
 
-/* Lien vers l'adresse web */
-a.website-link {
-    color: #1B3168;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a.website-link:hover {
-    text-decoration: underline;
-}
-
-/* Style pour le footer et le formulaire de contact */
-footer {
-    background: transparent;
-    padding: 2rem;
-    text-align: center;
-    margin-top: 0;
-    border-top: none;
-}
-
+/* Formulaire de contact modernisé */
 .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(27, 49, 104, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(196, 164, 132, 0.1);
 }
 
 .contact-form h2 {
-    margin-bottom: 1.5rem;
     color: #1B3168;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
-.contact-form label {
-    margin: 0.5rem 0 0.3rem;
-    text-align: left;
-    color: #333;
-    font-weight: bold;
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    left: 16px;
+    top: -10px;
+    background: white;
+    padding: 0 8px;
+    font-size: 0.9rem;
+    color: #1B3168;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border: 2px solid rgba(27, 49, 104, 0.1);
+    border-radius: 12px;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #1B3168;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
     resize: vertical;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form textarea:focus {
-    border-color: #1B3168;
-    box-shadow: 0 0 5px rgba(27, 49, 104, 0.5);
     outline: none;
+    border-color: #1B3168;
+    background: white;
+    box-shadow: 0 4px 16px rgba(27, 49, 104, 0.08);
+}
+
+.contact-form textarea::placeholder {
+    color: #9BA3B7;
 }
 
 .contact-form button {
-    padding: 0.7rem;
-    background-color: #1B3168;
-    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    background: #1B3168;
+    color: white;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 12px;
     font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
 .contact-form button:hover {
-    background-color: #162750;
+    background: #162750;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 49, 104, 0.2);
 }
 
-/* RESPONSIVE DESIGN */
+.contact-form button:active {
+    transform: translateY(0);
+}
 
-/* Tablettes (1024px et moins) */
+/* Responsive Design */
 @media (max-width: 1024px) {
     .background-left, .background-right {
         width: 25%;
@@ -271,55 +277,35 @@ footer {
     .expertise {
         font-size: 1em;
     }
+
+    .contact-form {
+        margin: 1.5rem;
+        padding: 2rem;
+    }
 }
 
-/* Mobiles (768px et moins) */
 @media (max-width: 768px) {
     .background-left, .background-right {
-        display: block;
-        position: absolute;
         width: 30%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .background-left {
-        left: 0;
-    }
-
-    .background-right {
-        right: 0;
     }
 
     .center-content {
         width: 100%;
         padding: 1.5rem;
         background-color: rgba(255, 255, 255, 0.9);
-        z-index: 2;
         border-radius: 0;
         box-shadow: none;
     }
 
-    .dropdown {
-        top: 15px;
-        left: 15px;
+    .contact-form {
+        margin: 1rem;
+        padding: 1.5rem;
+        border-radius: 12px;
     }
 
-    .dropbtn {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: #ffffff;
-        font-size: 16px;
-        padding: 12px;
-        border-radius: 5px;
-    }
-
-    .dropdown-content {
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        right: 10px;
-        border-radius: 5px;
+    .contact-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .logo {
@@ -327,13 +313,8 @@ footer {
         margin-bottom: 30px;
     }
 
-    .tagline {
+    .tagline, .main-text {
         font-size: 1.1em;
-        margin-bottom: 30px;
-    }
-
-    .main-text {
-        font-size: 1.3em;
         margin-bottom: 30px;
     }
 
@@ -341,13 +322,7 @@ footer {
         font-size: 1em;
     }
 
-    .expertise div {
-        margin: 10px 0;
-    }
-
     .diamond {
-        width: 8px;
-        height: 8px;
         margin: 15px 0;
     }
 }

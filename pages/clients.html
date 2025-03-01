@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Clients</title>
+    <!-- Lien vers la feuille de style -->
     <link rel="stylesheet" href="../styles/styles_clients.css">
     <link rel="icon" type="image/x-icon" href="../images/logo.png">
-
 </head>
 <body>
 
+<!-- En-tête avec le menu et le logo -->
 <div class="header">
     <div class="dropdown">
         <button class="dropbtn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -32,41 +34,65 @@
     <img src="../images/logo.png" alt="JLLB Avocats" class="logo">
 </div>
 
-
+<!-- Titre principal et sous-titre -->
 <div class="title">
-    <h1><span class="main-title">NOS</span> <span class="sub-title">CLIENTS</span></h1>
+    <h1>
+        <span class="main-title">NOS</span>
+        <span class="sub-title">CLIENTS</span>
+    </h1>
     <div class="underline"></div>
 </div>
-
-
 <div class="subtitle">
-    <p>Nous assistons tous les acteurs des secteurs de la <strong>construction</strong>,<br>
+    <p>
+        Nous assistons tous les acteurs des secteurs de la <strong>construction</strong>,<br>
         de <strong>l'immobilier</strong> et de <strong>l'assurance</strong>.
     </p>
 </div>
 
-
+<!-- Section Clients (2 colonnes : Hexagones à gauche / "Nos+" à droite) -->
 <div class="clients-section">
+
+    <!-- Colonne de gauche : hexagones -->
     <div class="hexagonal-layout">
+
         <div class="hex-row">
-            <div class="hex">Bailleurs</div>
+            <!-- Hexagones : BTP / Promoteurs -->
+            <div class="hex hex-btp">
+                Architectes, Bureaux d’études<br>
+                Entreprises du BTP
+                <img src="../images/casque-de-chantier.png" alt="Icône casque" class="icon-emoji">
+            </div>
+            <div class="hex hex-promoteurs">
+                Promoteurs/CCMistes
+                <img src="../images/grue.png" alt="Grue" class="icon-emoji">
+            </div>
         </div>
+
         <div class="hex-row">
-            <div class="hex">Entreprises du BTP</div>
-            <div class="hex">Promoteurs/CCMistes</div>
-        </div>
-        <div class="hex-row">
-            <div class="hex">Compagnies d’assurance</div>
+            <!-- Assurance, icône centrale, Syndics -->
+            <div class="hex hex-assurance">
+                Compagnies d’assurance
+                <img src="../images/bouclier.png" alt="Bouclier" class="icon-emoji">
+            </div>
             <div class="icon-center">
                 <img src="../images/building.png" alt="Building Icon">
             </div>
-            <div class="hex">Syndics de copropriété</div>
+            <div class="hex hex-syndics">
+                Syndics de copropriété
+                <img src="../images/document.png" alt="document" class="icon-emoji">
+            </div>
         </div>
+
         <div class="hex-row">
-            <div class="hex">Architectes, Bureaux d’études</div>
+            <!-- Bailleurs -->
+            <div class="hex hex-bailleurs">
+                Bailleurs
+                <img src="../images/keys.png" alt="Icône keys" class="icon-emoji">
+            </div>
         </div>
     </div>
 
+    <!-- Colonne de droite : bloc “Nos +” -->
     <div class="clients-info">
         <h3>Nos <span class="plus-icon">+</span></h3>
         <p>
@@ -74,6 +100,8 @@
             « sur mesure » pour satisfaire toujours plus nos clients.
         </p>
     </div>
+
 </div>
+
 </body>
 </html>

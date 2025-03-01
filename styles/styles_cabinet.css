@@ -1,12 +1,11 @@
-/* Style de base */
+/* Styles fondamentaux */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff);
-    background-size: 300% 300%;
-    animation: gradientAnimation 10s ease infinite;
+    background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff, #f9f3ed);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -15,19 +14,42 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body > * {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Composants de l'en-tête */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .logo {
     height: 80px;
+    transition: transform 0.3s ease;
 }
 
+.logo:hover {
+    transform: scale(1.02);
+}
+
+/* Navigation */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -43,69 +65,113 @@ body {
     color: #1B3168;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     left: 0;
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
     width: 200px;
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
 }
 
 .dropdown-content a {
     color: #1B3168;
-    padding: 10px 15px;
+    padding: 12px 15px;
     text-decoration: none;
     display: block;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #f9f9f9;
+    background-color: rgba(196, 164, 132, 0.1);
+    color: #1B3168;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Section titre */
 .title h1 {
     text-align: center;
-    margin: 30px 0 10px;
+    margin: 40px 0 20px;
 }
 
 .main-title {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
     color: #1B3168;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .sub-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: normal;
     color: #C4A484;
 }
 
+/* Contenu principal */
 .content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
-    margin: 40px auto;
+    gap: 60px;
+    margin: 60px auto;
     max-width: 1200px;
-    padding: 0 20px;
+    background: linear-gradient(135deg, rgba(249, 243, 237, 0.3), transparent);
+    border-radius: 30px;
+    padding: 40px;
+}
+
+/* Section profil */
+.profile {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(to bottom right, rgba(249, 243, 237, 0.4), rgba(249, 243, 237, 0.2));
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, rgba(196, 164, 132, 0.2), rgba(27, 49, 104, 0.1));
+    border-radius: 22px;
+    z-index: -1;
+}
+
+.profile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 50%, rgba(249, 243, 237, 0.15) 100%);
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .profile img {
     width: 250px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(27, 49, 104, 0.08), 0 0 0 1px rgba(196, 164, 132, 0.1);
+    transition: all 0.4s ease;
+    filter: contrast(1.02) brightness(1.02);
+    position: relative;
+    z-index: 2;
 }
 
+/* Section description */
 .description {
     flex: 1;
     font-size: 16px;
@@ -115,25 +181,30 @@ body {
 
 .description p {
     margin-bottom: 20px;
+    opacity: 0.9;
 }
 
 .highlight {
-    background-color: #F9F3ED;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background: linear-gradient(to right, rgba(249, 243, 237, 0.8), rgba(249, 243, 237, 0.6));
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(196, 164, 132, 0.1);
 }
 
 .highlight p {
     color: #1B3168;
     font-weight: normal;
+    margin: 0;
 }
 
+/* Section parcours */
 .parcours h2 {
-    font-size: 20px;
+    font-size: 22px;
     color: #1B3168;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: bold;
+    position: relative;
 }
 
 .parcours ul {
@@ -142,10 +213,11 @@ body {
 }
 
 .parcours ul li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 22px;
     color: #1B3168;
+    transition: transform 0.3s ease;
 }
 
 .parcours ul li::before {
@@ -157,9 +229,7 @@ body {
     font-size: 12px;
 }
 
-/* Responsive Design */
-
-/* Tablettes et mobiles */
+/* Design responsive */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -177,7 +247,7 @@ body {
     }
 
     .main-title {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .sub-title {
@@ -187,7 +257,9 @@ body {
     .content {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
+        padding: 20px;
+        margin: 30px 15px;
     }
 
     .profile img {
@@ -195,20 +267,21 @@ body {
     }
 
     .description {
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
+    }
 
-        .highlight {
-            padding: 10px;
-            font-size: 14px;
-        }
+    .highlight {
+        padding: 15px;
+    }
 
-        .parcours h2 {
-            font-size: 18px;
-        }
+    .parcours h2 {
+        font-size: 20px;
+        text-align: center;
+    }
 
-        .parcours ul li {
-            font-size: 14px;
-        }
+    .parcours ul li {
+        font-size: 15px;
+        text-align: left;
     }
 }
