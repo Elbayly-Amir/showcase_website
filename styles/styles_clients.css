@@ -7,7 +7,7 @@ body {
     background: linear-gradient(45deg, #fafafa, #e5dcdc, #ffffff);
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
-    color: #1B3168;  /* Texte en tons foncés par défaut */
+    color: #1B3168;
 }
 
 @keyframes gradientAnimation {
@@ -58,7 +58,7 @@ body > * {
     cursor: pointer;
     font-size: 18px;
     padding: 0;
-    color: #1B3168;  /* Texte du menu en foncé */
+    color: #1B3168;
     display: flex;
     align-items: center;
 }
@@ -75,7 +75,7 @@ body > * {
 }
 
 .dropdown-content a {
-    color: #1B3168;  /* Liens en foncé */
+    color: #1B3168;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
@@ -124,16 +124,13 @@ body > * {
     margin-bottom: 80px;
 }
 
-/* Clients Section
-   => 2 colonnes : .hexagonal-layout (à gauche) et .clients-info (à droite)
-*/
 .clients-section {
-    display: flex;               /* Disposition horizontale */
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;           /* Largeur max pour centrer */
-    margin: 0 auto;              /* Centre le conteneur */
-    padding: 20px;               /* Espace intérieur */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Zone des hexagones */
@@ -143,7 +140,6 @@ body > * {
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
-    /* Supprimé : margin-left: -15px; */
 }
 
 .hex-row {
@@ -153,7 +149,6 @@ body > * {
     position: relative;
 }
 
-/* Optionnel : si vous vouliez un effet “décalé” sur les rangées paires/impaires */
 .hex-row:nth-child(odd) {
     justify-content: flex-start;
 }
@@ -190,7 +185,7 @@ body > * {
     display: block;
     width: 30px;
     height: auto;
-    margin-top: 5px;  /* Sépare le texte de l'image */
+    margin-top: 5px;
 }
 
 /* Classes spécifiques */
@@ -230,7 +225,7 @@ body > * {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    align-self: flex-start; /* Aligne en haut */
+    align-self: flex-start;
     margin-top: 100px;
 
 }
@@ -252,7 +247,7 @@ body > * {
 /* Responsive Design */
 @media (max-width: 768px) {
     .clients-section {
-        flex-direction: column; /* Affiche en colonne sur petit écran */
+        flex-direction: column;
         align-items: center;
     }
     .hex-row {
@@ -268,6 +263,6 @@ body > * {
     .clients-info {
         max-width: 90%;
         margin-top: 20px;
-        margin-left: 0; /* Sur mobile, on retire une éventuelle marge latérale */
+        margin-left: 0;
     }
 }

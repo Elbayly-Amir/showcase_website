@@ -143,7 +143,6 @@ body > * {
     font-weight: bold;
 }
 
-/* Nouveau style pour les liens intégrés dans le texte principal */
 .main-text a {
     color: #1B3168;
     text-decoration: underline;
@@ -243,7 +242,7 @@ body > * {
     }
 
     .dropbtn {
-        background-color: rgba(0, 0, 0, 0.2); /* Encore plus clair sur mobile */
+        background-color: rgba(0, 0, 0, 0.2);
         color: #ffffff;
         font-size: 16px;
         padding: 12px;

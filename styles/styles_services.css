@@ -161,7 +161,7 @@ body > * {
 
 .additional-text {
     position: relative;
-    left: -340px; /* décalage de 20px vers la gauche */
+    left: -340px;
     text-align: left;
     font-size: 17px;
     color: #1B3168;
